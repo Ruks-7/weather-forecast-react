@@ -1,7 +1,6 @@
 .App{
-  background: radial-gradient(circle at -3.3% 48%, rgb(141, 146, 239,.2) 0%, rgb(99, 229, 254,.2) 90%);
-  margin: 16px auto;
-  max-width: 50%;
+  margin: 20px auto;
+  max-width: 40%;
   border: 1px solid white;
   border-radius: 6px;
   text-align: center;

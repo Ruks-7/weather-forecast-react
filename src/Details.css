@@ -17,7 +17,19 @@
     padding-bottom: 6px;
 }
 
-.forecastDays{
+.today{
     display: flex;
     justify-content: center;
+    background-color: #0685ec;
+    border: none;
+    border-radius: 4px;
+    margin:  10px 0;
+}
+
+.info{
+    padding: 0 10px;
+}
+.forecastDays{
+    display: flex;
+    justify-content: space-between;
 }
