@@ -16,3 +16,8 @@
     opacity: 0.8;   
     padding-bottom: 6px;
 }
+
+.forecastDays{
+    display: flex;
+    justify-content: center;
+}
