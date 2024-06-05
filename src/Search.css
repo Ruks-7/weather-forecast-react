@@ -1,0 +1,18 @@
+form input{
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.searchBar{
+
+    width: 50%;
+}
+
+.submit{
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: white;
+    color: rgb(56, 55, 55);
+}

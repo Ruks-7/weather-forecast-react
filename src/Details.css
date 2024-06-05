@@ -1,0 +1,18 @@
+.info{
+    margin-bottom: 0;
+}
+
+.degree{
+    font-size: 120px;
+    padding-top: 0;
+}
+
+.icon{
+    position: relative;
+    top: -100px;
+    left: 20px;
+    height: 0;
+    font-size: 100px;
+    opacity: 0.8;   
+    padding-bottom: 6px;
+}
