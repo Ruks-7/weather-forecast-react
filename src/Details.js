@@ -10,12 +10,12 @@ export default function Details(){
             <small>Kenya</small>
             </h1>
 
-                <p>Mostly Rainy</p>
+                <p className="weatherState">Mostly Rainy</p>
                     <div className="degree">20°
                     <div className="icon">🌧</div>
                     </div>
 
-                    <p className="dayDetails">Saturday, 10 June | 17:24pm</p>
+                    <p className="dayDetails">Wednesday, 6 June | 17:24pm</p>
 
                     <div className="today">
                     <Info icon="💧" measurement="60%" component="Humidity" />
