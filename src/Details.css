@@ -10,11 +10,11 @@
 
 .icon{
     position: relative;
-    top: -110px;
-    left: 20px;
+    top: -130px;
+    left: 50px;
     height: 0;
     font-size: 100px;
-    opacity: 0.8;   
+    opacity: 0.4;   
     padding-bottom: 6px;
 }
 
@@ -29,5 +29,11 @@
     border: 1px solid white;
     border-top: none;
     
+}
+
+.loader{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
 }
 

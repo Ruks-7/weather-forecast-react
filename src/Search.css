@@ -2,11 +2,12 @@ form input{
     border-radius: 4px;
     padding: 10px;
     font-size: 16px;
+    
 }
 
 .searchBar{
     border: none;
-    width: 70%;
+    width: 50%;
 }
 
 .submit{
@@ -19,4 +20,5 @@ form input{
 
 .submit:hover{
     background: radial-gradient(circle at -3.3% 48%, rgb(141, 146, 239) 0%, rgb(99, 229, 254) 90%);
+    color: #fff;
 }
