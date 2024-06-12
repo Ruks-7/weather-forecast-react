@@ -5,8 +5,8 @@ form input{
 }
 
 .searchBar{
-
-    width: 50%;
+    border: none;
+    width: 70%;
 }
 
 .submit{
@@ -15,4 +15,8 @@ form input{
     margin-left: 10px;
     background-color: white;
     color: rgb(56, 55, 55);
+}
+
+.submit:hover{
+    background: radial-gradient(circle at -3.3% 48%, rgb(141, 146, 239) 0%, rgb(99, 229, 254) 90%);
 }

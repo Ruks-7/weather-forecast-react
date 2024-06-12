@@ -3,7 +3,7 @@
 }
 
 .forecast{
-    border: 1px solid var(--primary-color);
+    border: none;
     border-radius: 30%;
     padding: 5px;
     background-color: var(--primary-color);

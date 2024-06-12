@@ -5,12 +5,12 @@
 .degree{
     height: 5;
     font-size: 120px;
-    padding-top: 0;
+    
 }
 
 .icon{
     position: relative;
-    top: -100px;
+    top: -110px;
     left: 20px;
     height: 0;
     font-size: 100px;
@@ -19,21 +19,15 @@
 }
 
 .today{
-    display: flex;
-    justify-content: center;
     border: none;
     border-radius: 4px;
     margin:  20px auto;
-    max-width: 60%;
 }
 
 .info{
-    padding: 0 10px;
+    padding: 4px;
     border: 1px solid white;
     border-top: none;
-    border-bottom: none;
+    
 }
-.forecastDays{
-    display: flex;
-    justify-content: space-between;
-}
+
