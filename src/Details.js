@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import axios from "axios";
 import {Circles} from "react-loader-spinner";
 import Forecast from "./Forecast.js";
+import NewDate from "./NewDate.js" ;
 import Info from "./Info.js";
 import "./Details.css";
 
@@ -16,8 +17,10 @@ function Details(props){
 			humidity: response.data.main.humidity,
 			windSpeed: response.data.wind.speed,
 			description: response.data.weather[0].description,
+			feels_like: Math.round(response.data.main.feels_like),
 			icon: response.data.weather[0].icon,
 			country: response.data.sys.country,
+			date: new Date(response.data.dt*1000),
 		});
 
 		setLoad(true);
@@ -38,7 +41,9 @@ function Details(props){
 									<div className="icon">🌧</div>
 									</div>
 
-									<p className="dayDetails">Wednesday, 6 June | 17:24pm</p>
+									<p className="dayDetails">
+										<NewDate date={info.date}/>
+									</p>
 
 									<div className="today container">
 											<div className="row">
@@ -46,10 +51,10 @@ function Details(props){
 													<Info icon="💧" measurement={info.humidity+"%"} component="Humidity" />
 													</div>
 													<div className="col"> 
-													<Info icon="💨" measurement={info.windSpeed+"km/h"} component="WindSpeed" />,
+													<Info icon="💨" measurement={info.windSpeed+"km/h"} component="WindSpeed" />
 													</div>
 													<div className="col"> 
-													<Info icon="☔" measurement={info.precipitation+"%"} component="Precipitation" />
+													<Info icon="🌡" measurement={info.feels_like+"°C"} component="Feels_like" />
 													</div>
 									</div>
 									</div>
