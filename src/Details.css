@@ -1,7 +1,32 @@
+
+
 .weatherState{
     height: 0;
 }
+form input{
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    
+}
 
+form .searchBar{
+    border: none;
+    width: 50%;
+}
+
+form .submit{
+    padding: 10px 20px;
+    margin-left: 10px;
+    background: radial-gradient(circle at -3.3% 48%, rgb(141, 146, 239) 0%, rgb(99, 229, 254) 90%);
+    color: #fff;
+    border: 1px solid  rgb(56, 55, 55, 0.5);
+}
+
+form .submit:hover{
+    background: white;
+    color: rgb(56, 55, 55);
+}
 .degree{
     height: 5;
     font-size: 120px;

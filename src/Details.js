@@ -7,12 +7,14 @@ import Info from "./Info.js";
 import "./Details.css";
 
 function Details(props){
+	let [city, setCity]=useState(props.city);
 	let[load, setLoad]=useState(false);
 	let [info, setInfo]=useState({});
 
 	function handleResponse(response){
 		console.log(response.data);
 		setInfo({
+			newCity: response.data.name,
 			temperature: Math.round(response.data.main.temp),
 			humidity: response.data.main.humidity,
 			windSpeed: response.data.wind.speed,
@@ -26,13 +28,37 @@ function Details(props){
 		setLoad(true);
 	}
 
-	
+	function search(){
+		const apiKey="a33b693cfbefd271b0ed075f9a8f65f0";
+			const apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+			axios.get(apiUrl).then(handleResponse);
+	}
+
+	function handleQuery(event){
+		event.preventDefault();
+		setCity(event.target.value);
+}
+
+function handleSearch(event){
+		event.preventDefault();
+		search();
+}
+
+
+
+let form = <div>
+<form onSubmit={handleSearch}>
+		<input className="searchBar" type="search" placeholder="Enter a place..."   onChange={handleQuery} />
+		<input className="submit" type="submit" value="Search"/>
+</form>
+</div>
 
 	if(load){
 		return(
 			<div>
+				{form}
 					<div className="container">
-			<h1>Nairobi,
+			<h1>{info.newCity}, 
 					<small className="fs-6">{info.country}</small>
 					</h1>
 					</div>
@@ -85,12 +111,12 @@ function Details(props){
 	);
 	}
 
+	
 	else{
-	const apiKey="a33b693cfbefd271b0ed075f9a8f65f0";
-	const apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(handleResponse);
-
+		search();
 	return ( 
+		<div>
+			{form}
 		<div className="loader">
 		<Circles
 		height="60"
@@ -101,6 +127,7 @@ function Details(props){
 		wrapperClass=""
 		visible={true}
 		/>
+		</div>
 		</div>
 	)
 }
