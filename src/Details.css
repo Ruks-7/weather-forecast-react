@@ -27,25 +27,27 @@ form .submit:hover{
     background: white;
     color: rgb(56, 55, 55);
 }
+
 .degree{
     height: 5;
     font-size: 120px;
-    
+    padding-top: none;
 }
 
 .icon{
     position: relative;
-    top: -127px;
-    left: 50px;
+    bottom: 120px;
+    left: 80px;
     height: 0;
+    padding: none;
     opacity: 0.4;   
-    padding-bottom: 6px;
 }
 
-.degree_icon{
+.unit{
     position: relative;
-    top: -9px;
-    
+    bottom: 130px;
+    left: 90px;
+    font-size: 20px;
 }
 
 .today{

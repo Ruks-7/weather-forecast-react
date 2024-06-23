@@ -4,7 +4,7 @@ import {Circles} from "react-loader-spinner";
 import Forecast from "./Forecast.js";
 import NewDate from "./NewDate.js" ;
 import Info from "./Info.js";
-import WeatherIcons from "./WeatherIcons.js";
+import UnitConversion from "./UnitConversion.js";
 import "./Details.css";
 
 function Details(props){
@@ -64,10 +64,7 @@ let form = <div>
 					</h1>
 					</div>
 							<p className="weatherState"><em>{info.description}</em></p>
-									<div className="degree">{info.temperature}<small className="degree_icon">°</small>
-									<div className="icon">
-										<WeatherIcons  code={info.icon} /></div>
-									</div>
+									<UnitConversion temperature={info.temperature} icon={info.icon}/>
 
 									<p className="dayDetails">
 										<NewDate date={info.date}/>
