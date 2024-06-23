@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App">
       <Details city="Nairobi"/>
-      <footer>This project is hosted on
-        <a href="https://github.com/Ruks-7/weather-forecast-react">Github</a>.
+      <footer>This project is hosted on 
+        <a href="https://github.com/Ruks-7/weather-forecast-react"> Github</a>.
       </footer>
     </div>
   );

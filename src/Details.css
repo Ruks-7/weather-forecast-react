@@ -35,12 +35,17 @@ form .submit:hover{
 
 .icon{
     position: relative;
-    top: -130px;
+    top: -127px;
     left: 50px;
     height: 0;
-    font-size: 100px;
     opacity: 0.4;   
     padding-bottom: 6px;
+}
+
+.degree_icon{
+    position: relative;
+    top: -9px;
+    
 }
 
 .today{
