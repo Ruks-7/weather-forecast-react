@@ -24,6 +24,7 @@ function Details(props){
 			icon: response.data.weather[0].icon,
 			country: response.data.sys.country,
 			date: new Date(response.data.dt*1000),
+			coordinate: response.data.coord,
 		});
 
 		setLoad(true);
@@ -44,8 +45,6 @@ function handleSearch(event){
 		event.preventDefault();
 		search();
 }
-
-
 
 let form = <div>
 <form onSubmit={handleSearch}>
@@ -85,27 +84,9 @@ let form = <div>
 									</div>
 
 
-							<div className= "container">
-									<div className="row ">
+										
+											<Forecast coordinates={info.coordinate}/>
 
-									<div className="col-3">
-											<Forecast day="Tue"  temp="20°/25°"/>
-											</div>
-									
-									<div className="col-3">
-									<Forecast day="Wed"  temp="18°/23°"/>
-											</div>
-
-									<div className="col-3">
-											<Forecast day="Thur" temp="21°/25°"/>
-											</div>
-
-									<div className="col-3">
-											<Forecast day="Fri"  temp="19°/24°"/>
-											</div>
-
-									</div>
-							</div>
 			</div>
 	);
 	}

@@ -25,14 +25,11 @@ export default function WeatherIcons(props){
   };
 
   return(
-    <div>
-        <ReactAnimatedWeather
+    <ReactAnimatedWeather
     icon={matching[props.code]}
-    color=""
-    size= {100}
+    color="grey"
+    size= {props.size}
     animate={true}
   />
-
-    </div>
   );
 }
